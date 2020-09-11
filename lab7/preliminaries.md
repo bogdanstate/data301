@@ -37,23 +37,23 @@ variable.
 Implement mean imputation for the `Age` variable, and mode 
 imputation for the `Embarked` variable.
 
-6. Train a binary logistic classifier predicting survival, 
+7. Train a binary logistic classifier predicting survival, 
 using just the `Fare`, `Embarked`, and `Pclass` variables as features.
 
-7. Evaluate the classifier's performance on the training set.
+8. Evaluate the classifier's performance on the training set.
 How should we interpret this measurement?
 
-8. Can we evaluate the classifier's performance on the test
+9. Can we evaluate the classifier's performance on the test
 set? If so, how would we do it? If not, how could we guess it?
 
-9. What is k-fold cross-validation? What is it good for? Can 
+10. What is k-fold cross-validation? What is it good for? Can 
 you give an example of how it works?
 
-10. Implement 10-fold cross-validation for our logistic classifier.
+11. Implement 10-fold cross-validation for our logistic classifier.
 
-11. What is the ROC curve? What does the Area Under the Curve (AUC)
+12. What is the ROC curve? What does the Area Under the Curve (AUC)
 tell us about classifier performance? When is it appropriate to use 
 an ROC curve?
 
-12. Generate and plot AUC curves for each of the 10 folds in our
+13. Generate and plot AUC curves for each of the 10 folds in our
 sample.
