@@ -51,7 +51,7 @@ valid = train_data.iloc[which_idxs_are_2, :]
   col_mapping = df['Embarked'].dropna().unique().reshape(-1, 1)
   ```
 
-```
+```python
 from sklearn.preprocessing import OneHotEncoder
 
 pclass_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
@@ -99,7 +99,7 @@ Use the following features:
 - you can use `np.concatenate([list of arrays], axis=1)` to concatenate np
   arrays and array-likes along their columns
 
-```
+```python
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -125,7 +125,8 @@ svm = SVC().fit(X, y)
    but you need to use the same encoders when featurizing.
 
    Hint: you can compute accuracy using `sklearn.metrics.accuracy_score`
-```
+
+```python
 pclass_X_valid = pclass_encoder.transform(valid[['Pclass']].fillna(''))
 sex_X_valid = sex_encoder.transform(valid[['Sex']].fillna(''))
 sibsp_X_valid = sibsp_encoder.transform(valid[['SibSp']].fillna(''))
@@ -154,7 +155,7 @@ print("Logistic: %.4f, KNN: %.4f, Decision tree: %.4f, SVM: %.4f" % (
 4. Get the majority vote from the 4 classifiers, breaking ties at random. What
    is the accuracy of this strategy?
 
-```
+```python
 import random
 casewise_predictions = zip(pred_logistic_valid, pred_knn_valid,
                            pred_decision_tree_valid, pred_svm_valid)
@@ -175,7 +176,7 @@ print(accuracy_reconciled_valid)
 Hint: you can use `np.stack` to "stack" together multiple arrays / array-likes,
 to create a higher-dimensional array.
 
-```
+```python
 pclass_X_secondary = pclass_encoder.transform(secondary[['Pclass']].fillna(''))
 sex_X_secondary = sex_encoder.transform(secondary[['Sex']].fillna(''))
 sibsp_X_secondary = sibsp_encoder.transform(secondary[['SibSp']].fillna(''))
