@@ -80,7 +80,7 @@ embarked_encoder.fit(embarked_col_mapping)
 embarked_X = embarked_encoder.transform(primary[['Embarked']].fillna(''))
 ```
 
-2. Using the same training dataset (the "primary" dataset from before), train
+3. Using the same training dataset (the "primary" dataset from before), train
 the following classifiers to predict survival:
     - Logistic classifier
     - KNeighbors classifier
@@ -117,7 +117,7 @@ decision_tree = DecisionTreeClassifier().fit(X, y)
 svm = SVC().fit(X, y)
 ```
 
-3. Using the four classifiers you trained previously to predict outcomes on the
+4. Using the four classifiers you trained previously to predict outcomes on the
    validation data. Which of the four classifiers has
    the highest accuracy?
 
@@ -152,7 +152,7 @@ print("Logistic: %.4f, KNN: %.4f, Decision tree: %.4f, SVM: %.4f" % (
 ))
 ```
 
-4. Get the majority vote from the 4 classifiers, breaking ties at random. What
+5. Get the majority vote from the 4 classifiers, breaking ties at random. What
    is the accuracy of this strategy?
 
 ```python
@@ -168,7 +168,7 @@ accuracy_reconciled_valid = accuracy_score(y_valid, reconciled_predictions)
 print(accuracy_reconciled_valid)
 ```
 
-5. Train a logistic regression using as its features the predictions of the
+6. Train a logistic regression using as its features the predictions of the
    four models on "secondary" data. Then use this model to weight the
    predictions on the validation data. How well does this strategy do on the validation
    data?
@@ -207,7 +207,7 @@ accuracy_blender_valid = accuracy_score(y_valid, blender_pred_valid)
 print(accuracy_blender_valid)
 ```
 
-6. Does the stacking classifier increase accuracy compared to any of the
+7. Does the stacking classifier increase accuracy compared to any of the
    individual classifiers? Why / why not? Explain the rough strategy for how we
    would implement cross-validation in this situation.
 
@@ -217,7 +217,7 @@ print(accuracy_blender_valid)
 > accuracy of this model, simply be re-running the code from question (1) and
 > collecting the results.
 
-7. Train blender models with any number of the 4 classifiers as their features.
+8. Train blender models with any number of the 4 classifiers as their features.
    Which model has the best accuracy? Is this a robust way to find the best
    classifier?
 

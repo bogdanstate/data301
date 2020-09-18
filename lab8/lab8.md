@@ -40,7 +40,7 @@ test_data = pd.read_csv("test.csv")
   ```
   col_mapping = df['Embarked'].dropna().unique().reshape(-1, 1)
   ```
-2. Using the same training dataset (the "primary" dataset from before), train
+3. Using the same training dataset (the "primary" dataset from before), train
 the following classifiers to predict survival:
     - Logistic classifier
     - KNeighbors classifier
@@ -59,7 +59,7 @@ Use the following features:
 - you can use `np.concatenate([list of arrays], axis=1)` to concatenate np
   arrays and array-likes along their columns
 
-3. Using the four classifiers you trained previously to predict outcomes on the
+4. Using the four classifiers you trained previously to predict outcomes on the
    validation data. Which of the four classifiers has
    the highest accuracy?
 
@@ -68,11 +68,11 @@ Use the following features:
 
    Hint: you can compute accuracy using `sklearn.metrics.accuracy_score`
 
-4. Get the majority vote from the 4 classifiers, breaking ties at random. What
+5. Get the majority vote from the 4 classifiers, breaking ties at random. What
    is the accuracy of this strategy?
 
 
-5. Train a logistic regression using as its features the predictions of the
+6. Train a logistic regression using as its features the predictions of the
    four models on "secondary" data. Then use this model to weight the
    predictions on the validation data. How well does this strategy do on the validation
    data?
@@ -81,10 +81,10 @@ Hint: you can use `np.stack` to "stack" together multiple arrays / array-likes,
 to create a higher-dimensional array.
 
 
-6. Does the stacking classifier increase accuracy compared to any of the
+7. Does the stacking classifier increase accuracy compared to any of the
    individual classifiers? Why / why not? Explain the rough strategy for how we
    would implement cross-validation in this situation.
 
-7. Train blender models with any number of the 4 classifiers as their features.
+8. Train blender models with any number of the 4 classifiers as their features.
    Which model has the best accuracy? Is this a robust way to find the best
    classifier?
