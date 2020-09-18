@@ -23,7 +23,7 @@ test_data = pd.read_csv("test.csv")
 - you can select rows at a particular location in a Pandas data frame using
   `.iloc[list\_of\_indices]`
 
-2. Featurize your primary dataset, by using the following strategy featurizers:
+2. Featurize your primary dataset, by using the following featurizers:
   - after replacing NaN values using the empty string, use one-hot encoding
   on the following categorical variables:
     - `Pclass`: the passenger class.

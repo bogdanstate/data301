@@ -33,7 +33,7 @@ secondary = train_data.iloc[which_idxs_are_1, :]
 valid = train_data.iloc[which_idxs_are_2, :]
 ```
 
-2. Featurize your primary dataset, by using the following strategy featurizers:
+2. Featurize your primary dataset, by using the following strategy:
   - after replacing NaN values using the empty string, use one-hot encoding
   on the following categorical variables:
     - `Pclass`: the passenger class.
