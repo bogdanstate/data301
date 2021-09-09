@@ -26,6 +26,7 @@ test_data = pd.read_csv("test.csv")
 2. Featurize your primary dataset, by using the following featurizers:
   - after replacing NaN values using the empty string, use one-hot encoding
   on the following categorical variables:
+    
     - `Pclass`: the passenger class.
     - `Sex`: passenger sex.
     - `SibSp`: # of siblings or spouses.
@@ -42,12 +43,14 @@ test_data = pd.read_csv("test.csv")
   ```
 3. Using the same training dataset (the "primary" dataset from before), train
 the following classifiers to predict survival:
+    
     - Logistic classifier
     - KNeighbors classifier
     - Decision tree classifier
     - Support Vector Machine Classifier
 
 Use the following features:
+    
     - `Pclass`: the passenger class.
     - `Sex`: passenger sex.
     - `SibSp`: # of siblings or spouses.
@@ -55,6 +58,7 @@ Use the following features:
     - `Embarked`: The place where each passenger embarked.
 
 *Hints*:
+
 - survival is indicated by the `Survived` column
 - you can use `np.concatenate([list of arrays], axis=1)` to concatenate np
   arrays and array-likes along their columns
