@@ -14,7 +14,8 @@ test_data = pd.read_csv("test.csv")
 ```
 
 1. Using random sampling, break down your dataset into 3 parts:
-   - "primary" training (~70%),
+
+- "primary" training (~70%),
    - "secondary" training (~20%), and
    - validation (~10%).
 
@@ -82,17 +83,19 @@ embarked_X = embarked_encoder.transform(primary[['Embarked']].fillna(''))
 
 3. Using the same training dataset (the "primary" dataset from before), train
 the following classifiers to predict survival:
-    - Logistic classifier
-    - KNeighbors classifier
-    - Decision tree classifier
-    - Support Vector Machine Classifier
+
+  - Logistic classifier
+  - KNeighbors classifier
+  - Decision tree classifier
+  - Support Vector Machine Classifier
 
 Use the following features:
-    - `Pclass`: the passenger class.
-    - `Sex`: passenger sex.
-    - `SibSp`: # of siblings or spouses.
-    - `Parch`: # of parents / children aboard.
-    - `Embarked`: The place where each passenger embarked.
+
+  - `Pclass`: the passenger class.
+  - `Sex`: passenger sex.
+  - `SibSp`: # of siblings or spouses.
+  - `Parch`: # of parents / children aboard.
+  - `Embarked`: The place where each passenger embarked.
 
 *Hints*:
 - survival is indicated by the `Survived` column
